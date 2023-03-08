@@ -21,7 +21,7 @@ class MessageParser {
       message.includes("ukuran lapangan volly")
       // message.includes("")
     ) {
-      return this.actionProvider.handleJumlahSiswa({ withAvatar: true });
+      return this.actionProvider.handleVolly({ withAvatar: true });
     }
 
     if (
