@@ -17,6 +17,14 @@ class MessageParser {
     }
 
     if (
+      message.includes("luas lapangan volly") ||
+      message.includes("ukuran lapangan volly")
+      // message.includes("")
+    ) {
+      return this.actionProvider.handleJumlahSiswa({ withAvatar: true });
+    }
+
+    if (
       message.includes("jurusan")
       // message.includes("")
     ) {
@@ -51,7 +59,6 @@ class MessageParser {
       return this.actionProvider.handleLuasLapangan({ withAvatar: true });
     }
 
-    
     if (
       message.includes("kantin")
       // message.includes("")

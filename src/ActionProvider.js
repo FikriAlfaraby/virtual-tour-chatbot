@@ -30,6 +30,13 @@ class ActionProvider {
     this.addMessageToState(message);
   };
 
+  handleVolly = () => {
+    const message = this.createChatBotMessage(
+      "Luas lapangan Volly adalah 400 x 500 M"
+    );
+    this.addMessageToState(message);
+  };
+
   handleKantin = () => {
     const message = this.createChatBotMessage(
       "Jumlah Kantin di SMK Telkom Maalang ada 10"
