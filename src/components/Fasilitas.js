@@ -6,10 +6,6 @@ import "./fasilitas.css";
 import rps from "../img/rps.jpg";
 import perpustakan from "../img/perpustakan.jpg";
 
-const customSliderStyles = {
-  background: "blue", // ganti dengan warna atau gambar background yang diinginkan
-};
-
 const cards = [
   {
     image: rps,
