@@ -68,7 +68,8 @@ class MessageParser {
 
     if (
       message.includes("prestasi siswa") ||
-      message.includes("kehebatan siswa")
+      message.includes("kehebatan siswa") ||
+      message.includes("prestasi")
       // message.includes("")
     ) {
       return this.actionProvider.handlePrestasiSiswa({ withAvatar: true });
@@ -94,10 +95,6 @@ class MessageParser {
     // }
 
     if (message.includes("terimakasih") || message.includes("terimakasi")) {
-      return this.actionProvider.handleThanks();
-    }
-
-    if (message.includes("prestasi") || message.includes("terimakasi")) {
       return this.actionProvider.handleThanks();
     }
 
