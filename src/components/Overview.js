@@ -24,12 +24,12 @@ const GeneralOptions = (props) => {
     },
     {
       name: "Prestasi Siswa SMK Telkom Malang",
-      handler: props.actionProvider.handleJurusan,
+      handler: props.actionProvider.handlePrestasiSiswa,
       id: 5,
     },
     {
       name: "Prestasi Guru SMK Telkom Malang",
-      handler: props.actionProvider.handleJurusan,
+      handler: props.actionProvider.handlePrestasiGuru,
       id: 6,
     },
   ];

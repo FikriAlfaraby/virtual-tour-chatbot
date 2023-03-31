@@ -4,6 +4,8 @@ import Overview from "./components/Overview";
 import CoBotAvatar from "./CoBotAvatar";
 import Fasilitas from "./components/Fasilitas";
 import JmlSiswa from "./components/Siswa";
+import PrestasiSiswa from "./components/PrestasiSiswa";
+import PrestasiGuru from "./components/PrestasiGuru";
 
 function getTimeGreeting() {
   const currentHour = new Date().getHours();
@@ -63,6 +65,14 @@ const config = {
     {
       widgetName: "fasilitas",
       widgetFunc: (props) => <Fasilitas {...props} />,
+    },
+    {
+      widgetName: "prestasiSiswa",
+      widgetFunc: (props) => <PrestasiSiswa {...props} />,
+    },
+    {
+      widgetName: "prestasiGuru",
+      widgetFunc: (props) => <PrestasiGuru {...props} />,
     },
   ],
 };

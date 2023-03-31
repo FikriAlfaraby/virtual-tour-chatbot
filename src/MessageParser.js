@@ -66,6 +66,22 @@ class MessageParser {
       return this.actionProvider.handleKantin({ withAvatar: true });
     }
 
+    if (
+      message.includes("prestasi siswa") ||
+      message.includes("kehebatan siswa")
+      // message.includes("")
+    ) {
+      return this.actionProvider.handlePrestasiSiswa({ withAvatar: true });
+    }
+
+    if (
+      message.includes("prestasi guru") ||
+      message.includes("kehebatan guru")
+      // message.includes("")
+    ) {
+      return this.actionProvider.handlePrestasiGuru({ withAvatar: true });
+    }
+
     // if (
     //   message.includes("stats") ||
     //   message.includes("statistics") ||

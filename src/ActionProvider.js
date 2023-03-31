@@ -64,6 +64,30 @@ class ActionProvider {
     this.addMessageToState(message);
   };
 
+  handlePrestasiSiswa = () => {
+    const message = this.createChatBotMessage(
+      "Ini adalah prestasi siswa -siswi SMK Telkom Malang",
+      {
+        widget: "prestasiSiswa",
+        loading: true,
+        terminateLoading: true,
+      }
+    );
+    this.addMessageToState(message);
+  };
+
+  handlePrestasiGuru = () => {
+    const message = this.createChatBotMessage(
+      "Ini adalah prestasi Guru SMK Telkom Malang",
+      {
+        widget: "prestasiGuru",
+        loading: true,
+        terminateLoading: true,
+      }
+    );
+    this.addMessageToState(message);
+  };
+
   handleTKJ = () => {
     const message = this.createChatBotMessage(
       "Teknik Komputer dan Jaringan atau yang biasa disebut TKJ adalah teknik yang mempelajari tentang cara instalasi PC, instalasi LAN, memperbaiki PC dan mempelajari program-program PC."
@@ -73,25 +97,12 @@ class ActionProvider {
 
   handleTanggal = () => {
     const message = this.createChatBotMessage(
-      "Tanggal Pendaftaran PPDB Adalah 14 Desember 2023"
+      "Tanggal Pendaftaran PPDB dibuka hingga 14 Desember 2023, untuk informasi lebih lanjut kunjungi https://ppdb.smktelkom-mlg.sch.id/"
     );
 
     this.addMessageToState(message);
   };
 
-  handleLocalStats = () => {
-    const message = this.createChatBotMessage(
-      "Here's the latest stats in Sri Lanka.",
-      {
-        widget: "localStatistics",
-        loading: true,
-        terminateLoading: true,
-        withAvatar: true,
-      }
-    );
-
-    this.addMessageToState(message);
-  };
   handleJurusan = () => {
     const message = this.createChatBotMessage(
       "Ini adalah jurusan di SMK Telkom Malang",
