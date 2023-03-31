@@ -22,6 +22,16 @@ const GeneralOptions = (props) => {
       handler: props.actionProvider.handleJurusan,
       id: 4,
     },
+    {
+      name: "Prestasi Siswa SMK Telkom Malang",
+      handler: props.actionProvider.handleJurusan,
+      id: 5,
+    },
+    {
+      name: "Prestasi Guru SMK Telkom Malang",
+      handler: props.actionProvider.handleJurusan,
+      id: 6,
+    },
   ];
   return <Options options={options} title="Options" {...props} />;
 };

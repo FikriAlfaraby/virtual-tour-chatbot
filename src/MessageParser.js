@@ -81,6 +81,10 @@ class MessageParser {
       return this.actionProvider.handleThanks();
     }
 
+    if (message.includes("prestasi") || message.includes("terimakasi")) {
+      return this.actionProvider.handleThanks();
+    }
+
     return this.actionProvider.handleOptions({ withAvatar: true });
   }
 }

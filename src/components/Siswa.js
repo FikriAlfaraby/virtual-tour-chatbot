@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Select from "react-select";
 import CountUp from "react-countup";
 
 function AnimatedNumber() {
@@ -13,46 +14,45 @@ function AnimatedNumber() {
     XR6: 90,
   };
 
-  const handleClassChange = (event) => {
-    setSelectedClass(event.target.value);
+  const handleClassChange = (selectedOption) => {
+    setSelectedClass(selectedOption);
   };
 
-  const getClassList = () => {
-    return Object.keys(classData);
+  const getClassOptions = () => {
+    return Object.keys(classData).map((kelas) => ({
+      value: kelas,
+      label: `Kelas ${kelas}`,
+    }));
   };
 
   const getSiswaCount = () => {
     if (selectedClass) {
-      return classData[selectedClass];
+      return classData[selectedClass.value];
     }
     return null;
   };
-
   return (
     <div className="p-4">
       <div className="flex items-center mb-4">
         <label htmlFor="class-select" className="mr-4 w-2/12">
           Pilih kelas:
         </label>
-        <select
+        <Select
           id="class-select"
-          className="border border-gray-400 rounded py-2 px-4 w-10/12"
+          className="w-10/12"
+          options={getClassOptions()}
           onChange={handleClassChange}
-        >
-          <option value="">-- Pilih kelas --</option>
-          {getClassList().map((kelas) => (
-            <option key={kelas} value={kelas}>
-              Kelas {kelas}
-            </option>
-          ))}
-        </select>
+          value={selectedClass}
+          isClearable={true}
+          placeholder="-- Pilih kelas --"
+        />
       </div>
       {selectedClass && (
         <div className="bg-gray-100 p-4 rounded-lg">
           <p className="text-lg font-bold mb-2">
-            Jumlah siswa di Kelas {selectedClass}:
+            Jumlah siswa di Kelas {selectedClass.label}:
           </p>
-          <p className="text-3xl font-bold">{getSiswaCount()}</p>
+          <CountUp end={getSiswaCount()} />
         </div>
       )}
     </div>
