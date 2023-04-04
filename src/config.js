@@ -2,7 +2,6 @@ import { createChatBotMessage } from "react-chatbot-kit";
 import Jurusan from "./components/Jurusan";
 import Overview from "./components/Overview";
 import CoBotAvatar from "./CoBotAvatar";
-import Fasilitas from "./components/Fasilitas";
 import JmlSiswa from "./components/Siswa";
 import PrestasiSiswa from "./components/PrestasiSiswa";
 import PrestasiGuru from "./components/PrestasiGuru";
@@ -61,10 +60,6 @@ const config = {
     {
       widgetName: "siswa",
       widgetFunc: (props) => <JmlSiswa {...props} />,
-    },
-    {
-      widgetName: "fasilitas",
-      widgetFunc: (props) => <Fasilitas {...props} />,
     },
     {
       widgetName: "prestasiSiswa",

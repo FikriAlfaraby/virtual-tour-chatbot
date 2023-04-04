@@ -19,12 +19,7 @@ class ActionProvider {
   };
   handleFasilitas = () => {
     const message = this.createChatBotMessage(
-      " di SMK Telkom Malang terdapat berbagai macam fasilitas yang mendukung proses belajar mengajar, antara lain :",
-      {
-        widget: "fasilitas",
-        loading: true,
-        terminateLoading: true,
-      }
+      "Anda dapat melihat dan menjelajahi Web Virtual Tour SMK Telkom Malang"
     );
 
     this.addMessageToState(message);
@@ -66,7 +61,7 @@ class ActionProvider {
 
   handlePrestasiSiswa = () => {
     const message = this.createChatBotMessage(
-      "Ini adalah prestasi siswa -siswi SMK Telkom Malang",
+      "Ini adalah Rekap Prestasi Siswa - Siswi SMK Telkom Malang Tahun 2023",
       {
         widget: "prestasiSiswa",
         loading: true,

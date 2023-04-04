@@ -6,12 +6,12 @@ import CountUp from "react-countup";
 function AnimatedNumber() {
   const [selectedClass, setSelectedClass] = useState(null);
   const classData = {
-    XR1: 25,
-    XR2: 30,
-    XR3: 40,
-    XR4: 60,
-    XR5: 80,
-    XR6: 90,
+    "X RPL": 319,
+    "X TKJ": 192,
+    "XI RPL": 300,
+    "XI TKJ": 210,
+    "XII RPL": 314,
+    "XII TKJ": 201,
   };
 
   const handleClassChange = (selectedOption) => {
@@ -21,7 +21,7 @@ function AnimatedNumber() {
   const getClassOptions = () => {
     return Object.keys(classData).map((kelas) => ({
       value: kelas,
-      label: `Kelas ${kelas}`,
+      label: `${kelas}`,
     }));
   };
 
@@ -52,7 +52,9 @@ function AnimatedNumber() {
           <p className="text-lg font-bold mb-2">
             Jumlah siswa di Kelas {selectedClass.label}:
           </p>
-          <CountUp end={getSiswaCount()} />
+          <p className="font-bold text-2xl">
+            <CountUp end={getSiswaCount()} />
+          </p>
         </div>
       )}
     </div>
